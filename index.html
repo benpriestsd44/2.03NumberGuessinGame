@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--change log May 1 2023: I've cleaned up the code a bit, I mixed some typos and repeats, and I changed the CSS to make it my own. -->
+<!--change log May 3 2023: I changed the code so that now you have to guess a number between 1-1000. I kept the number of guesses the same to make it more challenging. I also added a gradient background to the CSS-->
+<!--change log May 4 2023: I've continued to improve, testing the game and CSS. I have added images to the site.-->
+<!--change log May 9 2023: Created different divisions, changed the position of the strawberry images, improved the JS code (kept favoring numbers 1-100).-->
+<!--change log May 11 2023: I fixed/found a layout I liked for the strawberries, and more importantly, I fixed the problem where you would end up getting a "negative amount of remaining guesses".-->
+<!--change log May 15 2023: I've begun work on adding an Answer Streak, to keep track of how many times you got the correct answer..-->
+<!--change log May 16 2023: I think I have finished the answer streak. I also increased the number of guesses, it is now 12 instead of 10-->
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Number Guessing Game</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h1>Number guessing game</h1>
+        <p>Try to guess a random number between 1 and 1000.</p>
+        <p>You have 12 attempts to guess the right number.</p>
+        <p>Don't use decimals! The computer is in the 3rd grade and will be confused!</p>
+        <br />
+        <div id="wrapper">
+            <form class="form">
+                <br />
+                <label2 for="guessField" id="guess">Guess a number</label2>
+                <input type="text" id="guessField" class="guessField" />
+                <input
+                    type="submit"
+                    id="subt"
+                    value="Submit guess"
+                    class="guessSubmit" />
+            </form>
+
+            <div class="resultParas">
+                <p>Previous Guesses: <span class="guesses"></span></p>
+                <p>Guesses Remaining: <span class="lastResult">12</span></p>
+                 <p>Answer Streak: <span class="streak">0</span></p>
+                <!-- This makes the default guesses remaing = 12 -->
+                <p class="lowOrHi"></p>
+            </div>
+        </div>
+        <script src="app.js"></script>
+        
+        <img id="strawberry1"
+             src ="https://clipartix.com/wp-content/uploads/2017/11/Free-strawberry-clipart.png" 
+             alt="strawberry1"
+             width="200" 
+             length="200">
+        
+        <img id="strawberry2"
+             src ="https://clipartix.com/wp-content/uploads/2017/11/Free-strawberry-clipart.png" 
+             alt="strawberry2"
+             width="200" 
+             length="200">
+       
+        <img id="strawberry3"
+             src ="https://clipartix.com/wp-content/uploads/2017/11/Free-strawberry-clipart.png" 
+             alt="strawberry3"
+             width="200" 
+             length="200">
+        
+        <img id="strawberry4"
+             src ="https://clipartix.com/wp-content/uploads/2017/11/Free-strawberry-clipart.png" 
+             alt="strawberry4"
+             width="200" 
+             length="200">
+    </body>
+</html>
